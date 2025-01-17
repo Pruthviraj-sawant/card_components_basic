@@ -2,15 +2,15 @@ import React from "react";
 import data from "./data";
 import Tours from "./Components/Tours";
 import { useState } from "react";
-
+import Nav from '../src/Components/nav'
 const App = () => {
   const [tours, setTours] = useState(data);
 
   // when not intereseted is clicked this removeTour function is called and based on id passed in the function
   // the filter method is used to remove that data belonging to passed id
-  function removeTour(id) {
-    const newtour=tours.filter(tour =>  tour.id != id);
-    setTours(newtour);
+  function removeTour(id){
+    const newTours = tours.filter( tour => tour.id !== id);
+    setTours(newTours);
   }
 
   // when all tours are clicked not interested then reinitializing all data to tours array
@@ -25,7 +25,8 @@ const App = () => {
   return (
     <div className="App">
      {/* removeTour and tours data are passed as props in tours component */}
-      <Tours tours={tours} removeTour={removeTour}> </Tours>
+     <Nav/>
+      <Tours to={tours} removeTour={removeTour}> </Tours>
     </div>
   );
 };

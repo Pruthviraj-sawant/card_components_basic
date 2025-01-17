@@ -21,10 +21,11 @@ body {
 
 .title {
   font-size: 3rem;
-  margin: 6vh;
+  margin: 10vh;
   padding: 1vh 5vw;
   border: 7px dashed rgb(1, 17, 160);
   border-radius: 20px;
+
 }
 
 .cards {
@@ -99,7 +100,11 @@ body {
   background-color: red;
   color: white;
 }
+.btn{
+  display: flex;
+gap: 10px;
 
+}
 .refresh {
   height: 100vh;
   display: flex;
@@ -122,4 +127,47 @@ body {
 .btn-white:hover {
   background-color: gray;
   color: white;
+}
+
+.tour-detail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.tour-detail img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.tour-detail h2 {
+  margin-top: 1rem;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly ;
+  align-items: center;
+  background: black;
+  color: white;
+  text-decoration: none;
+list-style: none;
+height: 2.5rem;
+width: 100vw;
+font-size: 20px;
+position: fixed;
+
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 35em;
+  
 }
